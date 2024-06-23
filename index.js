@@ -138,18 +138,18 @@ app.get('/seeker/:email', (req, res) => {
 
 
 
-app.post("/search", (req, res) => {
-  const { location } = req.body;
+// app.post("/search", (req, res) => {
+//   const { location } = req.body;
 
-  const sql = `SELECT * FROM route WHERE loca1="${location}"`;
-  console.log("sql :", sql);
-  db.query(sql, (err, data) => {
-    // console.log('sql data :', data)
-    if (err) return res.json(err);
-    return res.json(data);
-    //  console.log(data)
-  });
-});
+//   const sql = `SELECT * FROM route WHERE loca1="${location}"`;
+//   console.log("sql :", sql);
+//   db.query(sql, (err, data) => {
+//     // console.log('sql data :', data)
+//     if (err) return res.json(err);
+//     return res.json(data);
+//     //  console.log(data)
+//   });
+// });
 
 app.post("/seeker", (req, res) => {
   const { skill } = req.body;
